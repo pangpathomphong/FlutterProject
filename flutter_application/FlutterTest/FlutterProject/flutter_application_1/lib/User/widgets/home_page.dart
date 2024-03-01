@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
             Text(
               user, // Use user constant
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontFamily: "Inter"),
