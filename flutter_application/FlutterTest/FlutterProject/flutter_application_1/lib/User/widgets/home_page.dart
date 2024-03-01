@@ -2,53 +2,46 @@ import 'package:flutter/material.dart';
 import 'info_card.dart';
 
 class HomePage extends StatelessWidget {
-  
+
   // Define user information constants
-  static const String user = "John Doe";
-  static const String email = "johndoe@example.com";
-  static const String phone = "+1 (555) 123-4567";
-  static const String location = "New York City, NY, USA";
+  static const String user = "Apichai MATT";
+  static const String email = "apichaiyesfam123@gmail.com";
+  static const String phone = "0-123-456-789";
+  static const String location = "Bangkok, Thailand";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[800],
+      backgroundColor: Colors.white,
       body: SafeArea(
-        minimum: const EdgeInsets.only(top: 120),
+        minimum: const EdgeInsets.only(top: 80),
         child: Column(
           children: <Widget>[
             CircleAvatar(
-              radius: 50,
+              radius: 60,
               backgroundImage: AssetImage('assets/Pang.jpg'),
             ),
             Text(
               user, // Use user constant
               style: TextStyle(
-              fontSize: 25,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Pacifico"),
+                fontSize: 16,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Inter"),
             ),
             Text(
               "User Information",
               style: TextStyle(
-              fontSize: 20,
-              color: Colors.blueGrey[200],
-              letterSpacing: 2.5,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Source Sans Pro",
+                fontSize: 14,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Inter",
               ),
             ),
-            InfoCard(text: phone, icon: Icons.phone, onPressed: () async {}),
-            InfoCard(
-              text: user,
-              icon: Icons.supervised_user_circle_rounded,
-              onPressed: () async {}),
-            InfoCard(
-              text: location,
-              icon: Icons.location_city,
-              onPressed: () async {}),
+            InfoCard(text: user, icon: Icons.supervised_user_circle_rounded, onPressed: () async {}),
+            InfoCard(text: location, icon: Icons.location_city, onPressed: () async {}),
             InfoCard(text: email, icon: Icons.email, onPressed: () async {}),
+            InfoCard(text: phone, icon: Icons.phone, onPressed: () async {}),
           ],
         ),
       ),

@@ -14,22 +14,26 @@ class InfoCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Card(
-        color: Colors.white,
-        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-        child: ListTile(
-          leading: Icon(
-            icon,
-            color: Colors.teal,
+        color: const Color.fromARGB(255, 95, 179, 248),
+        margin: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+        child: Padding(
+          padding: const EdgeInsets.all(9.0), // Adjust the padding here
+          child: ListTile(
+            leading: Icon(
+              icon,
+              color: Colors.white,
+            ),
+            title: Text(
+              text,
+              textAlign: TextAlign.center, // Optional, if you want to center horizontally
+              style: TextStyle(
+              color: Colors.white,
+              fontSize: 15, // Adjust the font size here
+              fontFamily: "Source Sans Pro"),
+            ),
           ),
-          title: Text(
-            text,
-            style: TextStyle(
-            color: Colors.teal,
-            fontSize: 20,
-            fontFamily: "Source Sans Pro"),
-          )
-        )
-      )
+        ),
+      ),
     );
   }
 }
