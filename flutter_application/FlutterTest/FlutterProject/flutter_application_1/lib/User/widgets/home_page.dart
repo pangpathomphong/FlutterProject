@@ -27,23 +27,59 @@ class HomePage extends StatelessWidget {
                 fontSize: 18,
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
-                fontFamily: "Inter"),
+                fontFamily: "Inter",
+              ),
             ),
             Text(
               "User Information",
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 12,
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontFamily: "Inter",
               ),
             ),
-            InfoCard(text: user, icon: Icons.supervised_user_circle_rounded, onPressed: () async {}),
-            InfoCard(text: location, icon: Icons.location_city, onPressed: () async {}),
+            InfoCard(
+                text: user,
+                icon: Icons.supervised_user_circle_rounded,
+                onPressed: () async {}),
+            InfoCard(
+                text: location,
+                icon: Icons.location_city,
+                onPressed: () async {}),
             InfoCard(text: email, icon: Icons.email, onPressed: () async {}),
             InfoCard(text: phone, icon: Icons.phone, onPressed: () async {}),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/Home.jpg',
+              width: 23,
+              height: 20,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/Heart.jpg',
+              width: 23,
+              height: 20,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/User.jpg',
+              width: 23,
+              height: 20,
+            ),
+            label: '',
+          ),
+          // Add more items if needed
+        ],
       ),
     );
   }
