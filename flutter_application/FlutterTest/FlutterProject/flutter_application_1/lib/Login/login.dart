@@ -105,8 +105,7 @@ class LoginState extends State<Login> {
                                 decoration: InputDecoration(
                                   hintText: "Email or Phone number",
                                   hintStyle: TextStyle(
-                                    color:
-                                        const Color.fromARGB(255, 0, 91, 166),
+                                    color:const Color.fromARGB(255, 0, 91, 166),
                                   ),
                                   border: InputBorder.none,
                                 ),
@@ -117,8 +116,7 @@ class LoginState extends State<Login> {
                               decoration: BoxDecoration(
                                 border: Border(
                                   bottom: BorderSide(
-                                    color: const Color.fromARGB(
-                                        255, 148, 147, 147),
+                                    color: const Color.fromARGB(255, 148, 147, 147),
                                   ),
                                 ),
                               ),
@@ -135,8 +133,7 @@ class LoginState extends State<Login> {
                                 decoration: InputDecoration(
                                   hintText: "Password",
                                   hintStyle: TextStyle(
-                                    color:
-                                        const Color.fromARGB(255, 0, 91, 166),
+                                    color:const Color.fromARGB(255, 0, 91, 166),
                                   ),
                                   border: InputBorder.none,
                                 ),
@@ -210,7 +207,7 @@ class LoginState extends State<Login> {
                           TextField(
                             decoration: InputDecoration(
                               hintText:
-                                  "Don't have any account : create account",
+                              "Don't have any account : create account",
                               hintStyle: TextStyle(
                                 color: Colors.black,
                               ),
