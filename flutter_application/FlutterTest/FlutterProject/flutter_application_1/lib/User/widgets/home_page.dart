@@ -4,8 +4,8 @@ import 'info_card.dart';
 class HomePage extends StatelessWidget {
 
   // Define user information constants
-  static const String user = "Apichai MATT";
-  static const String email = "apichaiyesfam123@gmail.com";
+  static const String user = "Pathomphong Chaichuay";
+  static const String email = "pangyesfam123@gmail.com";
   static const String phone = "0-123-456-789";
   static const String location = "Bangkok, Thailand";
 
