@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'info_card.dart';
 
 class HomePage extends StatelessWidget {
-
-  // Define user information constants
   static const String user = "Pathomphong Chaichuay";
   static const String email = "pangyesfam123@gmail.com";
   static const String phone = "0-123-456-789";
@@ -14,73 +12,43 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        minimum: const EdgeInsets.only(top: 80),
+        minimum: EdgeInsets.only(top: 80),
         child: Column(
           children: <Widget>[
             CircleAvatar(
-              radius: 60,
+              radius: 55,
               backgroundImage: AssetImage('assets/Pang.jpg'),
             ),
-            Text(
-              user, // Use user constant
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Inter",
-              ),
-            ),
-            Text(
-              "User Information",
-              style: TextStyle(
-                fontSize: 12,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Inter",
-              ),
-            ),
-            InfoCard(
-                text: user,
-                icon: Icons.supervised_user_circle_rounded,
-                onPressed: () async {}),
-            InfoCard(
-                text: location,
-                icon: Icons.location_city,
-                onPressed: () async {}),
-            InfoCard(text: email, icon: Icons.email, onPressed: () async {}),
-            InfoCard(text: phone, icon: Icons.phone, onPressed: () async {}),
+            _text(user, 18, FontWeight.bold),
+            _text("User Information", 12, FontWeight.bold),
+            _infoCard(user, Icons.supervised_user_circle_rounded),
+            _infoCard(location, Icons.location_city),
+            _infoCard(email, Icons.email),
+            _infoCard(phone, Icons.phone),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/Home.jpg',
-              width: 23,
-              height: 20,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/Heart.jpg',
-              width: 23,
-              height: 20,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/User.jpg',
-              width: 23,
-              height: 20,
-            ),
-            label: '',
-          ),
-          // Add more items if needed
+          _bottomNavItem('assets/Home.jpg'),
+          _bottomNavItem('assets/Heart.jpg'),
+          _bottomNavItem('assets/User.jpg'),
         ],
       ),
     );
   }
+
+  Widget _text(String text, double fontSize, FontWeight fontWeight) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: fontSize,
+        color: Colors.black,
+        fontWeight: fontWeight,
+        fontFamily: "Inter"),
+    );
+  }
+
+  Widget _infoCard(String text, IconData icon) => InfoCard(text: text, icon: icon, onPressed: () async {});
+  BottomNavigationBarItem _bottomNavItem(String assetPath) => BottomNavigationBarItem(icon: Image.asset(assetPath, width: 23, height: 20), label: '');
 }
