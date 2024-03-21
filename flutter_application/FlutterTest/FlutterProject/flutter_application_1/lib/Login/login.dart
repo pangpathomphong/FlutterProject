@@ -6,13 +6,11 @@ class Login extends StatefulWidget {
 }
 
 class LoginState extends State<Login> {
-
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>(); // Add form key
 
   void _submitForm() {
-
     if (_formKey.currentState!.validate()) {
 
       // Validate the form
