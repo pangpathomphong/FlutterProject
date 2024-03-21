@@ -22,9 +22,9 @@ class InfoCard extends StatelessWidget {
               text,
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 15,
-                fontFamily: "Source Sans Pro"),
+              color: Colors.white,
+              fontSize: 15,
+              fontFamily: "Source Sans Pro"),
             ),
           ),
         ),
